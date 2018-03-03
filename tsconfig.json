@@ -1,0 +1,23 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "target": "esnext",
+    "noImplicitAny": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "moduleResolution" : "node",
+    "lib": [
+      "es2017"
+    ],
+    "types": [
+      "node",
+      "jest"
+    ],
+    "sourceMap": true,
+    "baseUrl": "./src"
+  },
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts"
+  ]
+}

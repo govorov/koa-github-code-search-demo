@@ -1,18 +1,30 @@
 {
-  "name": "github-search-demo-app",
-  "version": "1.0.0",
-  "main": "index.js",
-  "author": "Stanislav E. Govorov",
-  "license": "MIT",
-  "devDependencies": {
-    "nodemon": "^1.17.1",
-    "tsconfig-paths": "^3.1.1",
-    "tslint": "^5.9.1"
-  },
-  "dependencies": {
-    "joi": "^13.1.2",
-    "koa": "^2.5.0",
-    "koa-bodyparser": "^4.2.0",
-    "koa-router": "^7.4.0"
-  }
+    "name": "github-search-demo-app",
+    "version": "1.0.0",
+    "main": "index.js",
+    "author": "Stanislav E. Govorov",
+    "license": "MIT",
+    "scripts": {
+        "start": "nodemon --config ./nodemon.json"
+    },
+    "devDependencies": {
+        "nodemon": "^1.17.1",
+        "ts-node": "^5.0.1",
+        "tsconfig-paths": "^3.1.1",
+        "tslint": "^5.9.1"
+    },
+    "dependencies": {
+        "@types/joi": "^13.0.5",
+        "@types/node": "^9.4.6",
+        "joi": "^13.1.2",
+        "koa": "^2.5.0",
+        "koa-bodyparser": "^4.2.0",
+        "koa-morgan": "^1.0.1",
+        "koa-router": "^7.4.0",
+        "typescript": "^2.7.2",
+        "winston": "^3.0.0-rc1"
+    },
+    "engines": {
+        "node": "9.5.0"
+    }
 }
