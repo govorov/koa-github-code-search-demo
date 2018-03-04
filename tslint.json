@@ -1,5 +1,4 @@
 {
-    "extends": ["tslint-react"],
     "rules": {
         "align": [
             true,
@@ -19,15 +18,8 @@
         "indent": [ true, "spaces" ],
         "interface-name": [true, "never-prefix"],
         "jsdoc-format": true,
-        "jsx-no-lambda": false,
-        "jsx-no-multiline-js": false,
         "label-position": true,
         "max-line-length": [ true, 120 ],
-        "member-ordering": [
-            true,
-            "static-before-instance",
-            "variables-before-functions"
-        ],
         "no-any": false,
         "no-arg": true,
         "no-bitwise": true,
@@ -55,11 +47,10 @@
         "no-use-before-declare": false,
         "one-line": [
             true,
-            "check-else",
             "check-open-brace",
             "check-whitespace"
         ],
-        "quotemark": [true, "single", "jsx-double"],
+        "quotemark": [true, "single"],
         "radix": true,
         "semicolon": [true, "always"],
         "switch-default": true,
@@ -67,11 +58,6 @@
         "trailing-comma": [false],
 
         "triple-equals": [ true, "allow-null-check" ],
-        "typedef": [
-            true,
-            "parameter",
-            "property-declaration"
-        ],
         "typedef-whitespace": [
             true,
             {
@@ -92,7 +78,6 @@
             "check-separator",
             "check-type",
             "check-typecast"
-        ],
-        "jsx-boolean-value": false
+        ]
     }
 }

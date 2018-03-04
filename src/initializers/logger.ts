@@ -29,7 +29,7 @@ export const initializeLogger = async ({ appConfig }: Options) => {
     });
 
     logger.stream = {
-        write: function(message: string, encoding: string){
+        write: function(message: string, encoding: string) {
             logger.info(message);
         }
     };

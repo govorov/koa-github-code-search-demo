@@ -19,6 +19,7 @@
         "@types/node": "^9.4.6",
         "@types/uuid": "^3.4.3",
         "axios": "^0.18.0",
+        "circular-json": "^0.5.1",
         "joi": "^13.1.2",
         "koa": "^2.5.0",
         "koa-bodyparser": "^4.2.0",
