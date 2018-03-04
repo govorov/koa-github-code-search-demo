@@ -1,5 +1,5 @@
 // koa itself
-import * as Koa from 'koa';
+import * as Koa    from 'koa';
 // pretty request logging
 import * as morgan from 'koa-morgan';
 
@@ -15,15 +15,18 @@ interface Options {
 }
 
 
-export const initializeWebServer = ({ logger, appConfig, apiAdapter }: Options) => {
+export const initializeWebServer = ({logger, appConfig, apiAdapter}: Options) => {
     const { port } = appConfig.webServer;
-    logger.debug(`Starting web server on ${port}`);
+    logger.debug(`Starting web server on port ${port}`);
 
     const webServer = new Koa();
-    const routes = Routes({ logger, appConfig });
+    const routes = Routes({logger, appConfig});
+
+    // inject api adapter
+    webServer.context.apiAdapter = apiAdapter;
 
     webServer
-        .use(morgan(':status :method :url  :res[content-length] - :response-time ms', { stream: logger.stream }))
+        .use(morgan(':status :method :url  :res[content-length] - :response-time ms', {stream: logger.stream}))
         .use(routes.routes())
         .use(routes.allowedMethods())
         .listen(port);

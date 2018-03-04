@@ -10,8 +10,7 @@
       "es2017"
     ],
     "types": [
-      "node",
-      "jest"
+      "node"
     ],
     "sourceMap": true,
     "baseUrl": "./src"

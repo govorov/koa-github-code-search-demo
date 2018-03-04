@@ -1,4 +1,5 @@
 import { appConfig }           from 'config';
+import { GithubApiAdapter }    from 'api-adapter/github';
 import { initializeLogger }    from 'initializers/logger';
 import { initializeWebServer } from 'initializers/web-server';
 
@@ -11,7 +12,8 @@ const bootstrap = async () => {
     // Injecting dependencies manually is fine in this prticular case.
     // If necessary, later migration to injection-js, typedi or similar libs is not a big deal
     const logger = await initializeLogger({ appConfig });
-    await initializeWebServer({ logger, apiAdapter: null, appConfig });
+    const apiAdapter = new GithubApiAdapter({ logger });
+    await initializeWebServer({ logger, apiAdapter, appConfig });
     logger.debug('Bootstrap done');
 };
 
