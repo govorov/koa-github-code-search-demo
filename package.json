@@ -5,7 +5,8 @@
     "author": "Stanislav E. Govorov",
     "license": "MIT",
     "scripts": {
-        "start": "nodemon --config ./nodemon.json"
+        "start": "nodemon --config ./nodemon.json",
+        "start:prod" : "NODE_ENV=production ts-node -r tsconfig-paths/register ./src/server.ts"
     },
     "devDependencies": {
         "nodemon": "^1.17.1",
