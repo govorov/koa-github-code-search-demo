@@ -12,11 +12,12 @@ export interface AppConfig {
         base: string;
     };
 
-};
+}
 
 
 const isProduction = process.env.NODE_ENV === 'production';
 const DEFAULT_PORT = 3000;
+const loglevel =  process.env.APP_LOGLEVEL || (isProduction ? 'warn' : 'debug');
 
 
 export const appConfig: AppConfig = {
@@ -26,7 +27,7 @@ export const appConfig: AppConfig = {
     },
 
     logger: {
-        level: isProduction ? 'warn' : 'debug',
+        level: loglevel,
     },
 
     router: {
