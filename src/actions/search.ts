@@ -35,9 +35,9 @@ const validateInput = (params) => {
     if (result.error != null) {
         throw new InputValidationError({
             originalError: result.error,
-        })
+        });
     }
-}
+};
 
 
 export const searchAction = async (ctx: ContextWithDependencies, next) => {
