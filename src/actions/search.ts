@@ -25,7 +25,7 @@ const paramsSchema = Joi
             .number(),
         sort_by: Joi
             .string(),
-        order: Joi
+        sort_order: Joi
             .string(),
     });
 
@@ -49,7 +49,7 @@ export const searchAction = async (ctx: ContextWithDependencies, next) => {
         pageNumber: params.page,
         pageSize  : params.per_page,
         sortBy    : params.sort_by,
-        sortOrder : params.order,
+        sortOrder : params.sort_order,
     });
 
     ctx.body = result;
