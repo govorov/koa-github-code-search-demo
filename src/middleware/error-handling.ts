@@ -28,7 +28,6 @@ export const errorHandlingMiddlewareCreator = ({ logger }) => {
             // In production env good idea is to send stack with details to external system
             // logger.error(httpAwareError.stack);
 
-            // throw httpAwareError;
             ctx.status = httpAwareError.status;
             ctx.body = CircularJSON.stringify(serializeError(httpAwareError));
             ctx.type = 'json';

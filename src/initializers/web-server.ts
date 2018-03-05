@@ -1,4 +1,3 @@
-// koa itself
 import * as Koa    from 'koa';
 // pretty request logging
 import * as morgan from 'koa-morgan';
