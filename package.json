@@ -6,15 +6,15 @@
     "license": "MIT",
     "scripts": {
         "start": "nodemon --config ./nodemon.json",
-        "start:prod" : "NODE_ENV=production ts-node -r tsconfig-paths/register ./src/server.ts"
+        "start:prod": "NODE_ENV=production ts-node -r tsconfig-paths/register ./src/server.ts"
     },
     "devDependencies": {
         "nodemon": "^1.17.1",
-        "ts-node": "3.3.0",
-        "tsconfig-paths": "^3.1.1",
         "tslint": "^5.9.1"
     },
     "dependencies": {
+        "ts-node": "3.3.0",
+        "tsconfig-paths": "^3.1.1",
         "@types/joi": "^13.0.5",
         "@types/koa": "^2.0.44",
         "@types/node": "^9.4.6",
