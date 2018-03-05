@@ -2,7 +2,7 @@
 
 Uses v3 github api. Related documentation is [here](https://developer.github.com/v3)
 
-Tested on node v9.5.0
+Tested on node v9.5.0 @ linux x64
 
 Based on [Koa](http://koajs.com)❤
 
